@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remplacer les espaces par des tirets bas</title>
+</head>
+<body>
+    <label for="inputString">Entrez une chaîne de caractères :</label>
+    <input type="text" id="inputString">
+    <button onclick="replaceSpaces()">Remplacer les espaces</button>
+    <p id="output"></p>
+    <script>
+        function replaceSpaces() {
+            let input = document.getElementById("inputString").value;
+            let output = document.getElementById("output"); 
+            output.textContent = replaceSpaceWithUnderscores(input)
+        }
+
+        function replaceSpaceWithUnderscores(str) {
+            return str.replace(/ /g, "_");
+        }
+    </script>
+</body>
+</html>
